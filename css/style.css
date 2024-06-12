@@ -1,0 +1,245 @@
+* {                                         /*The css property that applies to all elements like the font-family, padding, margin and box-sizing.*/
+    margin: 0%;
+    padding: 0%;
+    font-family: "nunito", sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100%;
+}
+
+/*Header Code Starts -----------------------------------------------------------------------------*/
+
+header {
+    height: 15%;
+    display: flex;
+}
+
+.logo {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo > h1 {
+    color: salmon;
+}
+
+.logo > h1 > span {
+    color: green;
+}
+
+.navigationMenu {
+    flex: 3;
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigationMenu > menu {
+    display: flex;
+    gap: 2em;
+    justify-content: center;
+}
+
+.navigationMenu > menu > li {
+    list-style: none;
+}
+
+.navigationMenu > menu > li > a {
+    text-decoration: none;
+    font-size: 1.4em;
+    color: green;
+    font-weight: 800;
+} 
+
+.accountMenu {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+}
+
+button {
+    height: 3em;
+    width: 6em;
+    border-radius: 1.1em;
+    background-color: bisque;
+    font-weight: 800;
+}
+
+/*Header Code Ends -------------------------------------------------------------------------------*/
+
+main {
+    height: 100%;
+    padding-top: 5em;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+/*Section 1 Code Starts --------------------------------------------------------------------------*/
+
+.introSection {
+    height: 20em;
+    display: flex;
+}
+
+.introText {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 5em;
+    color: green;
+}
+
+.introText > p > span {
+    color: salmon;
+    font-size: 1.2em;
+}
+
+.deliveryLogo {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.deliveryLogo > img {
+    height: 60%;
+}
+
+.introImage {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.introImage > img {
+    height: 80%;
+    width: auto;
+}
+
+
+/*Section 1 Code Ends ----------------------------------------------------------------------------*/
+
+/*Section 2 Code Starts --------------------------------------------------------------------------*/
+.menu {
+    height: 50%;
+    margin-top: 3em; 
+    display: flex;
+    flex-direction: column;
+}
+
+.menuText {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    font-weight: 800;
+    color: salmon;
+}
+
+.menuItemsPizza {
+    flex: 7;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);     /*Defining the layout of the container that is gonna be used as a grid. Defined 3 columns and 1 row for three options for the pizza base.*/
+    grid-template-rows:1fr;
+    gap: 2em;
+}
+
+.menuItemsPizza > input {
+    display: none;
+}
+
+.menuItemsPizza > input:checked + .gridItemsPizza {
+    transition: 300ms ease-in-out;             /*When the user selects the option, the background color changes to cornflowerblue from bisque with a transition of 300ms.*/
+    background-color: cornflowerblue;
+}
+
+.gridItemsPizza {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column-reverse;
+    transition: 300ms ease-in-out;     /*A transition of 300ms to make it look better when the user deselects the option.*/
+    background-color: bisque;        /*Added a default background color to each div in the menu to select the pizza base.*/
+    border-radius: 2em;
+}
+
+.gridItemsPizza > label > img {
+    max-width: 300px;
+    max-height: 200px;
+}
+
+/*Section 2 Code Ends ----------------------------------------------------------------------------*/
+
+
+/*Section 3 Code Starts --------------------------------------------------------------------------*/
+
+.menuItemsToppings {
+    flex: 7;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr;
+    gap: 1.1em;
+}
+
+.menuItemsToppings > input {
+    display: none;
+}
+
+.menuItemsToppings > input:checked + .gridItemsToppings {
+    background-color: cornflowerblue;
+    transition: 300ms ease-in-out;
+}
+
+.gridItemsToppings {
+    background-color: bisque;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 300ms ease-in-out;
+    border-radius: 2em;
+}
+
+.gridItemsToppings > label > img {
+    max-width: 200px;
+    max-height: 200px;
+}
+
+/*Section 3 Code Ends ----------------------------------------------------------------------------*/
+
+
+/*Section 4 Code Starts --------------------------------------------------------------------------*/
+
+.order {
+    height: 10%;
+    margin-top: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.order > button > a {
+    text-decoration: none;
+}
+
+/*Section 4 Code Ends ----------------------------------------------------------------------------*/
+
+footer {
+    height: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/*Note: Every image used in this project has been modified by a background-remover tool to make it look better.
+URL: https://www.remove.bg  */

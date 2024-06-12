@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="order pizza online">
+    <title>Document</title>
+    <meta name="robots" content="nofollow, noindex">
+
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+
+    <!--Css-->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header> <!--Header will contain from left to right, the company name, the links and the sign in button.-->
+        <div class="logo">
+            <h1>Crash<span>Pizza</span></h1>
+        </div>
+        <nav class="navigationMenu">
+            <menu> <!--Menu is a list of links for: order, gift cards, about, add coupon, club 11-11-->
+                   <!--Added a pound in the href attribute so that clicking on the links won't open a black page.-->
+                <li><a href="#">Order</a></li>
+                <li><a href="#">Gift Cards</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Add Coupon</a></li>
+                <li><a href="#">Club 11-11</a></li>
+            </menu>
+        </nav>
+        <div class="accountMenu"> <!--This div just contains the sign in button.-->
+            <button>Sign In</button>
+        </div>
+    </header>
+    <main> <!--The main content of the page is divided into 4 sections: the intro section with order now logo, section for selection of pizza base, section for selection of toppings, section to finalize the order.-->
+        <section class="introSection"> <!--The intro section uses a display:flex; property with three child elements for: intro text, the delivery man logo andd the pizza image.-->
+            <div class="introText"><p>ORDER<span>NOW</span></p></div> <!--I have used span here to use different colors for the two words of the text.-->
+            <div class="deliveryLogo"><img src="./img/delivery-bg-removebg-preview.png" alt="Logo of a delivery driver"></div>
+            <div class="introImage">
+                <img src="./img/pizza-bg-removebg-preview.png" alt="Image of a pizza">
+            </div>
+        </section>
+        <section class="menu"> <!--The whole section has the display:flex; property and two child elements: the text which acts as the heading, the options which are input of type="radio", so the user can choose only one from given three options.-->
+            <div class="menuText">
+                <p>MENU : Select your base</p>
+            </div>
+            <form class="menuItemsPizza" action="submit" method="post">
+                <input type="radio" id="item1" name="pizza" value="item1">
+                <div class="gridItemsPizza">
+                    <label for="item1">
+                        <img src="./img/item1.png" alt="image of pizza base">
+                    </label>
+                </div>
+
+                <input type="radio" id="item2" name="pizza" value="item2">
+                <div class="gridItemsPizza">
+                    <label for="item2">
+                        <img src="./img/item2.png" alt="image of pizza base">
+                    </label>
+                </div>
+
+                <input type="radio" id="item3" name="pizza" value="item3">
+                <div class="gridItemsPizza">
+                    <label for="item3">
+                        <img src="./img/item3.png" alt="image of pizza base">
+                    </label>
+                </div>
+                    </label>
+                </div>
+            </form>
+        </section>
+        <section class="menu"> <!--This form is to choose the toppings that go on top of you pizza base.-->
+            <div class="menuText">
+                <p>MENU: Select your toppings</p>
+            </div>
+            <form class="menuItemsToppings" action="submit" method="post"> <!--I have used input and div, along with label element to make the whole div a checkbox, also added the display:none; property to input elements in the css.-->
+                <input type="checkbox" id="mushrooms" id="mushrooms">
+                <div class="gridItemsToppings">
+                    <label for="mushrooms">
+                        <img src="./img/mushrooms-bg-removebg-preview.png" alt="">
+                    </label>
+                </div>
+
+                <input type="checkbox" id="cheese" id="cheese">
+                <div class="gridItemsToppings">
+                    <label for="cheese">
+                        <img src="./img/cheese-removebg-preview.png" alt="">
+                    </label>
+                </div>
+
+                <input type="checkbox" id="pepperoni" id="pepperoni">
+                <div class="gridItemsToppings">
+                    <label for="pepperoni">
+                        <img src="./img/pepperoni-bg-removebg-preview.png" alt="">
+                    </label>
+                </div>
+
+                <input type="checkbox" id="sausages" id="sausages">
+                <div class="gridItemsToppings">
+                    <label for="sausages">
+                        <img src="./img/sausages-bg-removebg-preview.png" alt="">
+                    </label>
+                </div>
+
+                <input type="checkbox" id="onions" id="onions">
+                <div class="gridItemsToppings">
+                    <label for="onions">
+                        <img src="./img/onions-bg-removebg-preview.png" alt="">
+                    </label>
+                </div>
+            </form>
+        </section>
+        <section class="order"> <!--Last section just contains the order button, to finalize your order. Sadly, there is no functionality yet.-->
+            <button><a href="">Order</a></button>
+        </section>
+    </main>
+    <footer> <!--In the end I have used to footer to add the copyright statement.-->
+        <h6>@Copyright - Vaibhav 200595784</h6>
+    </footer>
+</body>
+</html>
